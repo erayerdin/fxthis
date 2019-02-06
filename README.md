@@ -17,8 +17,11 @@ This project is in development for now.
  programmatically. It is also used by meta component.
  - **System Component:** Helps getting information
  that your software runs on.
+ - **Application Data Components:** Can access global/local application
+ data/config.
 
 ## Works to be Done
 
- - **Application Data Components:** Will contain
- helpers for IO on application data.
+ - **Documentation:** via mkdocs
+ - Docstrings
+ - Better way to separate view/controller
