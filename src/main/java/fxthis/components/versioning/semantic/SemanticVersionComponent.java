@@ -19,11 +19,11 @@ public class SemanticVersionComponent extends Component implements VersionCompon
     @Inject
     public SemanticVersionComponent(Logger logger) {
         super(logger);
-        this.majorNumber = Integer.parseInt(this.properties.getProperty("majorVersion"));
-        this.minorNumber = Integer.parseInt(this.properties.getProperty("minorVersion"));
-        this.patchNumber = Integer.parseInt(properties.getProperty("patchVersion"));
+        this.majorNumber = Integer.parseInt(this.properties.getProperty("majorVersion", "0"));
+        this.minorNumber = Integer.parseInt(this.properties.getProperty("minorVersion", "1"));
+        this.patchNumber = Integer.parseInt(properties.getProperty("patchVersion", "0"));
 
-        this.status = Status.getStatus(properties.getProperty("status"));
+        this.status = Status.getStatus(properties.getProperty("status", "prealpha"));
     }
 
     public int getMajorNumber() {

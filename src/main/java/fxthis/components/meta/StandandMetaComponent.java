@@ -18,8 +18,8 @@ public class StandandMetaComponent extends Component implements MetaComponent {
     @Inject
     public StandandMetaComponent(Logger logger) {
         super(logger);
-        this.humanReadableName = this.properties.getProperty("humanReadableName");
-        this.computerReadableName = this.properties.getProperty("computerReadableName");
+        this.humanReadableName = this.properties.getProperty("humanReadableName", null);
+        this.computerReadableName = this.properties.getProperty("computerReadableName", null);
     }
 
     public String getHumanReadableName() {
