@@ -13,7 +13,15 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-// todo 2 - class doc
+/**
+ * <p>A View binds an <code>fxml</code> file and POJO together.</p>
+ *
+ * <p>Simply extend this class and definitely use <code>setViewFile</code> in constructor in order to define
+ * what XML file you are going to use.</p>
+ *
+ * <p>There are many getters and setters to set properties of an <code>fxml</code> file. These are not
+ * JavaFX beans and cannot be changed on the runtime, so you need to set these beforehand.</p>
+ */
 public abstract class GenericView {
     private static String baseDir = "views";
     private static Image globalIcon = null;
@@ -29,18 +37,15 @@ public abstract class GenericView {
     private boolean maximized = false;
     private boolean fullscreen = false;
 
-    private Scene scene;
-    private Stage stage;
-
     public GenericView() {
         this.title = new SimpleStringProperty("JavaFX Application");
     }
 
-    // todo 2 - method doc
+    /**
+     * @return A Scene based on this view.
+     * @throws IOException
+     */
     public Scene getScene() throws IOException {
-        if (scene != null)
-            return this.scene;
-
         Scene scene = null;
 
         String viewFile = this.getViewFile();
@@ -51,16 +56,18 @@ public abstract class GenericView {
         else
             scene = new Scene(root, this.width, this.height);
 
-        this.scene = scene;
-
         return scene;
     }
 
-    // todo 2 - method doc
+    /**
+     * @return A Stage based on this view.
+     * @throws IOException
+     */
     public Stage getStage() throws IOException {
         Stage stage = new Stage();
 
-        if (this.getTitle() != null) stage.setTitle(this.getTitle());
+        if (this.getTitle() != null)
+            stage.titleProperty().bindBidirectional(this.titleProperty());
 
         stage.setScene(this.getScene());
 
@@ -81,6 +88,9 @@ public abstract class GenericView {
         return stage;
     }
 
+    /**
+     * @return The path of view file in classpath, including base directory.
+     */
     public String getViewFile() {
         StringBuilder builder = new StringBuilder();
         builder.append(getBaseDir());
@@ -169,10 +179,16 @@ public abstract class GenericView {
         this.fullscreen = fullscreen;
     }
 
+    /**
+     * @return Base directory for views in classpath.
+     */
     public static String getBaseDir() {
         return baseDir;
     }
 
+    /**
+     * @param baseDir Base directory for views in classpath.
+     */
     public static void setBaseDir(String baseDir) {
         GenericView.baseDir = baseDir;
     }
