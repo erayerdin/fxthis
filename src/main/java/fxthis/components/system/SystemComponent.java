@@ -1,9 +1,16 @@
 package fxthis.components.system;
 
-// todo 2 - class doc
+/**
+ * <p>Helps getting information about the machine that JVM runs on.</p>
+ */
 public interface SystemComponent {
-    // todo 2 - method doc
+    /**
+     * @return The operating system.
+     */
     OperatingSystem getOperatingSystem();
-    // todo 2 - method doc
+
+    /**
+     * @return The CPU architecture.
+     */
     Architecture getArchitecture();
 }

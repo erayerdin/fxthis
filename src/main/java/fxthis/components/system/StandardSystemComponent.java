@@ -5,7 +5,11 @@ import fxthis.components.Component;
 
 import java.util.logging.Logger;
 
-// todo 2 - class doc
+/**
+ * <p>An implementation of SystemComponent.</p>
+ *
+ * <p>It gets the operating system and CPU architecture information that JVM runs on.</p>
+ */
 public class StandardSystemComponent extends Component implements SystemComponent {
     private OperatingSystem operatingSystem;
     private Architecture architecture;

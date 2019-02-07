@@ -1,6 +1,8 @@
 package fxthis.components.system;
 
-// todo 2 - class doc
+/**
+ * <p>The operating system that JVM runs on and fxthis recognizes.</p>
+ */
 public enum OperatingSystem {
     WINDOWS("Windows"),
     LINUX("GNU/Linux"),

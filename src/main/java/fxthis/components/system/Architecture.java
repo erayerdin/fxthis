@@ -1,6 +1,8 @@
 package fxthis.components.system;
 
-// todo 2 - class doc
+/**
+ * <p>The architecture of the CPU that JVM runs on and fxthis recognizes.</p>
+ */
 public enum Architecture {
     X86("x86"),
     AMD64("amd64"),
