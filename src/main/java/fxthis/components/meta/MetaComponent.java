@@ -2,14 +2,29 @@ package fxthis.components.meta;
 
 import fxthis.components.versioning.VersionComponent;
 
-// todo 2 - class doc
+/**
+ * <p>Helps getting application's meta data.</p>
+ */
 public interface MetaComponent {
-    // todo 2 - method doc
+    /**
+     * @return Human-readable name of the application.
+     */
     String generateHumanReadableName();
-    // todo 2 - method doc
+
+    /**
+     * @return Computer-readable name of the application.
+     */
     String generateComputerReadableName();
-    // todo 2 - method doc
+
+    /**
+     * @see VersionComponent
+     * @return Version component.
+     */
     VersionComponent getVersionComponent();
-    // todo 2 - method doc
+
+    /**
+     * @param key A key to get.
+     * @return Another custom value based on the key.
+     */
     String getValue(String key);
 }

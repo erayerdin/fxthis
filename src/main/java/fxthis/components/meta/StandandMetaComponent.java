@@ -6,7 +6,32 @@ import fxthis.components.versioning.VersionComponent;
 
 import java.util.logging.Logger;
 
-// todo 2 - class doc
+/**
+ * <p>An implementation of MetaComponent.</p>
+ *
+ * <p>This implementation uses <code>meta.properties</code> file in the classpath in order to get various
+ * information about application. <code>meta.properties</code> needs to have the keys below:</p>
+ *
+ * <table>
+ *     <tr>
+ *         <th>Property Name</th>
+ *         <th>Property Type</th>
+ *         <th>Assigned Default Value</th>
+ *     </tr>
+ *     <tr>
+ *         <td>humanReadableName</td>
+ *         <td>String</td>
+ *         <td>null</td>
+ *     </tr>
+ *     <tr>
+ *         <td>computerReadableName</td>
+ *         <td>String</td>
+ *         <td>null</td>
+ *     </tr>
+ * </table>
+ *
+ * @see MetaComponent
+ */
 public class StandandMetaComponent extends Component implements MetaComponent {
     private static final String PROPERTIES_FILE = "meta.properties";
 
