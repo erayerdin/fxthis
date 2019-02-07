@@ -43,7 +43,8 @@ public abstract class GenericView {
 
         Scene scene = null;
 
-        Parent root = FXMLLoader.load(this.getClass().getClassLoader().getResource(this.getViewFile()));
+        String viewFile = this.getViewFile();
+        Parent root = FXMLLoader.load(this.getClass().getClassLoader().getResource(viewFile));
 
         if (this.width < 1 || this.height < 1)
             scene = new Scene(root);
@@ -84,7 +85,7 @@ public abstract class GenericView {
         StringBuilder builder = new StringBuilder();
         builder.append(getBaseDir());
         builder.append('/');
-        builder.append(this.getViewFile());
+        builder.append(this.viewFile);
         return builder.toString();
     }
 

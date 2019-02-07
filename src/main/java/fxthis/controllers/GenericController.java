@@ -7,7 +7,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-// todo 2 - class doc
+/**
+ * <p>A helper abstract class for JavaFX controllers, which already implements Initializable.</p>
+ *
+ * @see Initializable
+ */
 public abstract class GenericController implements Initializable {
     /**
      * Gets scene.
@@ -18,8 +22,7 @@ public abstract class GenericController implements Initializable {
      */
     public Scene getScene(ActionEvent event) {
         Node source = (Node) event.getSource();
-        Scene scene = source.getScene();
-        return scene;
+        return source.getScene();
     }
 
     /**
