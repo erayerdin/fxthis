@@ -1,6 +1,8 @@
 package fxthis.components.versioning.semantic;
 
-// todo 2 - class doc
+/**
+ * The status of version.
+ */
 public enum Status {
     SNAPSHOT("Snapshot", "snapshot"),
     PREALPHA("Prealpha", "prealpha"),
@@ -11,6 +13,10 @@ public enum Status {
     private String humanReadableName;
     private String computerReadableName;
 
+    /**
+     * @param humanReadableName A human-readable name of the status.
+     * @param computerReadableName A computer-readable name of the status.
+     */
     Status(String humanReadableName, String computerReadableName) {
         this.humanReadableName = humanReadableName;
         this.computerReadableName = computerReadableName;
@@ -24,7 +30,14 @@ public enum Status {
         return computerReadableName;
     }
 
-    // todo 2 - method doc
+    /**
+     * <p>Gets status by its computer-readable name.</p>
+     *
+     * <p>By default, if the value is not found, it returns <code>Status.STABLE</code>.</p>
+     *
+     * @param value Computer-readable name of the status.
+     * @return The status itself.
+     */
     public static Status getStatus(String value) {
         for (Status status : Status.values()) {
             if (status.getComputerReadableName().equals(value)) {

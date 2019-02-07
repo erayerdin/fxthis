@@ -1,9 +1,16 @@
 package fxthis.components.versioning;
 
-// todo 2 - class doc
+/**
+ * A component to help defining the version.
+ */
 public interface VersionComponent {
-    // todo 2 - method doc
+    /**
+     * @return A human-readable version.
+     */
     String generateHumanReadableVersion();
-    // todo 2 - method doc
+
+    /**
+     * @return A computer-readable version.
+     */
     String generateComputerReadableVersion();
 }

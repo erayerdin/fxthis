@@ -6,6 +6,42 @@ import fxthis.components.versioning.VersionComponent;
 
 import java.util.logging.Logger;
 
+/**
+ * <p>An implementation of VersionComponent.</p>
+ *
+ * <p>This implementation uses <code>meta.properties</code> file in the classpath in order to get various
+ * information about application. <code>meta.properties</code> needs to have the keys below:</p>
+ *
+ * <table>
+ *     <tr>
+ *         <th>Property Name</th>
+ *         <th>Property Type</th>
+ *         <th>Assigned Default Value</th>
+ *     </tr>
+ *     <tr>
+ *         <td>majorVersion</td>
+ *         <td>int</td>
+ *         <td>0</td>
+ *     </tr>
+ *     <tr>
+ *         <td>minorVersion</td>
+ *         <td>int</td>
+ *         <td>1</td>
+ *     </tr>
+ *     <tr>
+ *         <td>patchVersion</td>
+ *         <td>int</td>
+ *         <td>0</td>
+ *     </tr>
+ *     <tr>
+ *         <td>status</td>
+ *         <td>String</td>
+ *         <td>stable</td>
+ *     </tr>
+ * </table>
+ *
+ * @see VersionComponent
+ */
 public class SemanticVersionComponent extends Component implements VersionComponent {
     private static final String PROPERTIES_FILE = "meta.properties";
 
@@ -23,7 +59,7 @@ public class SemanticVersionComponent extends Component implements VersionCompon
         this.minorNumber = Integer.parseInt(this.properties.getProperty("minorVersion", "1"));
         this.patchNumber = Integer.parseInt(properties.getProperty("patchVersion", "0"));
 
-        this.status = Status.getStatus(properties.getProperty("status", "prealpha"));
+        this.status = Status.getStatus(properties.getProperty("status", "stable").toLowerCase());
     }
 
     public int getMajorNumber() {
