@@ -6,7 +6,12 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-// todo 2 - class doc
+/**
+ * <p>An abstract class to define a component. If you want to define a custom component, this is probably what
+ * you want to use.</p>
+ *
+ * <p>A standard logger is injected to every component.</p>
+ */
 public abstract class Component {
     protected Properties properties;
 
@@ -35,6 +40,12 @@ public abstract class Component {
         }
     }
 
-    // todo 2 - method doc
+    /**
+     * <p>Properties file path in classpath.</p>
+     *
+     * <p>Not every component needs a properties file to work. If it does not, simply return null.</p>
+     *
+     * @return Path to properties file in classpath.
+     */
     protected abstract String getPropertiesFilePath();
 }
