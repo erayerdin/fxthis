@@ -1,6 +1,11 @@
 
+<<<<<<< HEAD
 # Created by https://www.gitignore.io/api/maven,java,git,jetbrains+all,intellij+all
 # Edit at https://www.gitignore.io/?templates=maven,java,git,jetbrains+all,intellij+all
+=======
+# Created by https://www.gitignore.io/api/java,maven,intellij+all,jetbrains+all,git
+# Edit at https://www.gitignore.io/?templates=java,maven,intellij+all,jetbrains+all,git
+>>>>>>> 2ca5f8f6fd57401d1168a8a0791850a0ab64a92f
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -183,4 +188,8 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+<<<<<<< HEAD
 # End of https://www.gitignore.io/api/maven,java,git,jetbrains+all,intellij+all
+=======
+# End of https://www.gitignore.io/api/java,maven,intellij+all,jetbrains+all,git
+>>>>>>> 2ca5f8f6fd57401d1168a8a0791850a0ab64a92f
