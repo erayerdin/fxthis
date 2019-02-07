@@ -13,7 +13,23 @@ import java.nio.file.*;
 import java.util.Iterator;
 import java.util.logging.Logger;
 
-// todo 2 - class doc
+/**
+ * <p>An abstract-class for any application data/config directory.</p>
+ *
+ * <p>If users of fxthis cannot find the implementation they'd like to use, they can extend this
+ * class.</p>
+ *
+ * <p>Also see implementations.</p>
+ * <!-- todo whenever you add implementation, add it as @see -->
+ *
+ * @see Path
+ *
+ * <!-- Implementations -->
+ * @see fxthis.components.appdata.GlobalApplicationDataPathComponent
+ * @see fxthis.components.appdata.GlobalApplicationConfigPathComponent
+ * @see fxthis.components.appdata.LocalApplicationDataPathComponent
+ * @see fxthis.components.appdata.LocalApplicationConfigPathComponent
+ */
 public abstract class ApplicationDataPathComponent extends Component implements Path {
     protected Path directory;
 
@@ -36,13 +52,25 @@ public abstract class ApplicationDataPathComponent extends Component implements 
         }
     }
 
-    // todo 2 - method doc
+    /**
+     * Gets directory for Windows.
+     *
+     * @return Directory for Windows
+     */
     protected abstract Path fetchWindowsDirectory();
 
-    // todo 2 - method doc
+    /**
+     * Gets directory for Linux.
+     *
+     * @return Directory for Linux
+     */
     protected abstract Path fetchLinuxDirectory();
 
-    // todo 2 - method doc
+    /**
+     * Gets directory for OSX.
+     *
+     * @return Directory for OSX
+     */
     protected abstract Path fetchOSXDirectory();
 
     @Override

@@ -8,6 +8,10 @@ import java.lang.annotation.Target;
 import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-// todo 2 - class doc
+/**
+ * A Guice binding annotation for global data directory used with ApplicationDataPathComponent.
+ *
+ * @see fxthis.components.appdata.ApplicationDataPathComponent
+ */
 @BindingAnnotation @Target({ FIELD, PARAMETER, METHOD }) @Retention(RUNTIME)
 public @interface GlobalData {}

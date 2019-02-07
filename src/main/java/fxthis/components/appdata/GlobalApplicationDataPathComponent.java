@@ -8,6 +8,20 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.logging.Logger;
 
+/**
+ * <p>An implementation of ApplicationDataPathComponent.</p>
+ *
+ * <p>Configures Global Application Data Path. This path is meant to be for your application's data
+ * files. Depending on the operating system, it will possess the directories below:</p>
+ *
+ * <ul>
+ *     <li><strong>Windows:</strong> <code>C:\ProgramData\[appname]\[appversion]\data</code></li>
+ *     <li><strong>Linux:</strong> <code>/usr/share/[appname]/[appversion]</code></li>
+ *     <li><strong>OSX:</strong> <code>/Library/Application Support/[appname]/[appversion]/data</code></li>
+ * </ul>
+ *
+ * @see ApplicationDataPathComponent
+ */
 public class GlobalApplicationDataPathComponent extends ApplicationDataPathComponent {
     @Inject
     public GlobalApplicationDataPathComponent(Logger logger, SystemComponent systemComponent, MetaComponent metaComponent) {

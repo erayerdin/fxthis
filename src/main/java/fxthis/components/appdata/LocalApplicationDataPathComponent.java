@@ -8,7 +8,20 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.logging.Logger;
 
-// todo 2 - class doc
+/**
+ * <p>An implementation of ApplicationDataPathComponent.</p>
+ *
+ * <p>Configures Local Application Data Path. This path is meant to be for your application's data
+ * files. Depending on the operating system, it will possess the directories below:</p>
+ *
+ * <ul>
+ *     <li><strong>Windows:</strong> <code>%APPDATA%\[appname]\[appversion]\data</code></li>
+ *     <li><strong>Linux:</strong> <code>$HOME/.local/share/[appname]/[appversion]</code></li>
+ *     <li><strong>OSX:</strong> <code>/Users/[username]/Application Support/[appname]/[appversion]/data</code></li>
+ * </ul>
+ *
+ * @see ApplicationDataPathComponent
+ */
 public class LocalApplicationDataPathComponent extends ApplicationDataPathComponent {
     @Inject
     public LocalApplicationDataPathComponent(Logger logger, SystemComponent systemComponent, MetaComponent metaComponent) {

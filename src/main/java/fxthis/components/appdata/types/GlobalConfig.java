@@ -8,6 +8,10 @@ import static java.lang.annotation.ElementType.PARAMETER;
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;
 
-// todo 2 - class doc
+/**
+ * A Guice binding annotation for global config directory used with ApplicationDataPathComponent.
+ *
+ * @see fxthis.components.appdata.ApplicationDataPathComponent
+ */
 @BindingAnnotation @Target({ FIELD, PARAMETER, METHOD }) @Retention(RUNTIME)
 public @interface GlobalConfig {}
