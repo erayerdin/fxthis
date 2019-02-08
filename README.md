@@ -3,7 +3,9 @@
 FXThis is a Guice-powered JavaFX library, which utilizes the approach of
 dependency injection.
 
-This project is in development for now.
+This project is in development for now. You can grab the project from
+[Jitpack](https://jitpack.io/#erayerdin/fxthis). Since it is in continuous
+development, continuous reporting is not provided. Use it at your own risk.
 
 ## Works Done
 
@@ -25,3 +27,8 @@ This project is in development for now.
  - **Documentation:** via mkdocs
  - Docstrings
  - Better way to separate view/controller
+ 
+## How to Contribute?
+
+Open the project and look for `todo`s. There are many aspects that you can
+contribute.
