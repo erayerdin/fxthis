@@ -1,5 +1,11 @@
 # FXThis
 
+ > This repository is archived due to the lack of development time and
+ > better options. I really encourage you to use [TornadoFX][tornadofx_url]
+ > which utilizes Kotlin.
+
+[tornadofx_url]: https://tornadofx.io
+
 FXThis is a Guice-powered JavaFX library, which utilizes the approach of
 dependency injection.
 
